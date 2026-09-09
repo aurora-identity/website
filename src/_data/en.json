@@ -1,0 +1,15 @@
+{
+  "cta": {
+    "bookDemo": "Book a demo",
+    "talkToUs": "Start a conversation"
+  },
+  "nav": {
+    "home": "Home",
+    "how": "How it works",
+    "governIt": "Govern It",
+    "findIt": "Find It",
+    "referrals": "Referrals",
+    "docs": "Docs",
+    "partners": "Partners"
+  }
+}

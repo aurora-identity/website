@@ -1,0 +1,39 @@
+{% set onDocs = page.url == '/docs/' %}
+{% set onAurora = page.url == '/docs/what-is-aurora/' %}
+{% set onIngest = page.url == '/docs/ingest/' %}
+{% set onCloudSelfHosted = page.url == '/docs/deployment/' %}
+{% set onReportingDashboard = page.url == '/docs/reporting-dashboard/' %}
+{% set onInternal = page.url == '/docs/how-it-works/' %}
+{% set onBrowserExtension = page.url == '/docs/browser-extension/' %}
+{% set onAuroraDb = page.url == '/docs/aurora-db/' %}
+{% set onEmailAnalysis = page.url == '/docs/email-analysis-engine/' %}
+<nav class="docs-nav" aria-label="Documentation navigation">
+  <h1><a href="/docs/">/docs</a></h1>
+  <div class="nav-section">
+    <h2>Getting Started</h2>
+    <ul class="nav-links">
+      <li><a class="{% if onDocs %}active{% endif %}" href="/docs/">Overview</a></li>
+      <li><a class="{% if onAurora %}active{% endif %}" href="/docs/what-is-aurora/">What is Aurora?</a></li>
+      <li><a class="{% if onInternal %}active{% endif %}" href="/docs/how-it-works/">How it works?</a></li>
+      <li><a class="{% if onCloudSelfHosted %}active{% endif %}" href="/docs/deployment/">Self-managed deployment</a></li>
+    </ul>
+  </div>
+  <div class="nav-section">
+    <h2>Key Components</h2>
+    <ul class="nav-links">
+      <li><a class="indent {% if onBrowserExtension %}active{% endif %}" href="/docs/browser-extension/">Browser extension</a></li>
+      <li><a class="indent {% if onAuroraDb %}active{% endif %}" href="/docs/aurora-db/">Aurora-DB</a></li>
+      <li><a class="indent {% if onReportingDashboard %}active{% endif %}" href="/docs/reporting-dashboard/">Reporting dashboard</a></li>
+      <li><a class="indent {% if onEmailAnalysis %}active{% endif %}" href="/docs/email-analysis-engine/">Email analysis engine</a></li>
+    </ul>
+  </div>
+  <div class="nav-section">
+    <h2>API</h2>
+    <ul class="nav-links">
+      <li><a class="indent {% if onIngest %}active{% endif %}" href="/docs/ingest/">POST /ingest</a></li>
+    </ul>
+  </div>
+  <div class="nav-section">
+    <h2 class="h2-link"><a href="/docs/contact">/contact</a></h2>
+  </div>
+</nav>

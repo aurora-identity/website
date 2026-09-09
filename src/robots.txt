@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /docs/
+
+Sitemap: https://www.auroraidentity.com/sitemap.xml

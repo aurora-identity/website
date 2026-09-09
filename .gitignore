@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build output
+_site/
+
+# Eleventy fetch cache
+.cache/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor and OS noise
+.DS_Store
+.vscode/
+.idea/
+
+.claude/

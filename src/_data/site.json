@@ -1,0 +1,12 @@
+{
+  "name": "Aurora Identity",
+  "url": "https://www.auroraidentity.com",
+  "tagline": "High-fidelity AI identity intelligence for unmanaged access.",
+  "calendarUrl": "https://calendar.app.google/JUSpTcxGKYZD3AzSA",
+  "contactEmail": "contact@auroraidentity.com",
+  "brand": {
+    "demoIntro": "See every AI identity touching your data.",
+    "demoReassurance": "Watch how Aurora maps AI tool usage to real users with browser telemetry.",
+    "demoTrust": "Runs fully inside your cloud with zero data exfiltration."
+  }
+}

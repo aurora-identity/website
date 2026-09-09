@@ -1,0 +1,25 @@
+<nav class="top-nav" data-component="top-nav">
+  <div class="top-nav__inner">
+    <a class="logo" href="/">
+      <img class="logo__image" src="/assets/images/logo.png" alt="{{ site.name }} logo" width="28" height="28">
+      <span class="logo__text">{{ site.name }}</span>
+    </a>
+    <button class="top-nav__toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-nav-toggle>
+      <span class="sr-only">Toggle navigation</span>
+      <span class="top-nav__toggle-line"></span>
+      <span class="top-nav__toggle-line"></span>
+      <span class="top-nav__toggle-line"></span>
+    </button>
+    <div class="top-nav__menu" id="primary-navigation" data-nav-menu data-open="false">
+      <div class="top-nav__links">
+        <a class="top-nav__link top-nav__link--audience" href="/govern-it/">{{ en.nav.governIt }}</a>
+        <a class="top-nav__link top-nav__link--audience" href="/find-it/">{{ en.nav.findIt }}</a>
+        <a class="top-nav__link" href="/how-it-works/">{{ en.nav.how }}</a>
+        <a class="top-nav__link" href="/docs/">{{ en.nav.docs }}</a>
+      </div>
+      <div class="top-nav__cta">
+        <a class="btn btn-primary btn-nav" data-cta href="{{ site.calendarUrl }}" target="_blank" rel="noopener noreferrer">{{ en.cta.bookDemo }}</a>
+      </div>
+    </div>
+  </div>
+</nav>

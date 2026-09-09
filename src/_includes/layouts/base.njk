@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ title or site.name }}</title>
+  <meta name="description" content="Aurora Identity discovers shadow identities, service accounts, and approved non-SSO tools across your organisation. Resolve ownership. Close the gap between your IAM and your actual identity surface.">
+  <meta property="og:title" content="{{ title or site.name }}">
+  <meta property="og:description" content="Shadow identity governance for security teams. Discover unowned service accounts and shadow AI tools. Resolve ownership without touching your IDP.">
+  <meta name="keywords" content="shadow identity, service account governance, shadow AI, non-SSO accounts, identity governance, unowned accounts, AI tool governance, shadow IT">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <link rel="icon" type="image/x-icon" sizes="16x16" href="/assets/images/logo16.ico">
+  <link rel="icon" type="image/x-icon" sizes="24x24" href="/assets/images/logo24.ico">
+  <link rel="icon" type="image/x-icon" sizes="32x32" href="/assets/images/logo32.ico">
+  <link rel="icon" type="image/x-icon" sizes="48x48" href="/assets/images/logo48.ico">
+  <link rel="icon" type="image/x-icon" sizes="64x64" href="/assets/images/logo64.ico">
+  <link rel="icon" type="image/x-icon" sizes="96x96" href="/assets/images/logo96.ico">
+  <link rel="icon" type="image/x-icon" sizes="128x128" href="/assets/images/logo128.ico">
+  <link rel="icon" type="image/x-icon" sizes="256x256" href="/assets/images/logo256.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Space+Mono:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6ZK6VQE98G"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6ZK6VQE98G');
+  </script>
+</head>
+<body class="site-body">
+  <div class="background-gradient" aria-hidden="true"></div>
+  {% include "nav.njk" %}
+  {% if page.url == '/' %}
+    {% include "hero.njk" %}
+  {% endif %}
+  <main class="container page-container">{{ content | safe }}</main>
+  {% include "footer.njk" %}
+  <script src="/assets/js/site.js" defer></script>
+</body>
+</html>

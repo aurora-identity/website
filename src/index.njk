@@ -1,0 +1,224 @@
+---
+title: "Aurora Identity — Shadow identity governance."
+layout: "layouts/base.njk"
+permalink: "/"
+---
+
+<div class="page-top page-top--flush">
+
+  <div class="fork-lead">
+    <p class="fork-lead__label">Who is this for?</p>
+  </div>
+
+  <p class="fork-guide">Aurora works for teams at different stages. Find the one that sounds like you.</p>
+
+  <div class="self-select">
+    <a class="self-select__door self-select__door--a" href="/govern-it/">
+      <div class="self-select__door-inner">
+        <p class="self-select__tag">You have the stack</p>
+        <h2 class="self-select__headline">Govern It</h2>
+        <p class="self-select__body">You already have Okta. You have cloud identity. Maybe NHI coverage. Your tooling is solid. What it can't give you is a name — a real person in the business who can say: that service account is mine, here's why it exists, and yes you can turn it off.</p>
+        <span class="self-select__cta">See how it works →</span>
+      </div>
+    </a>
+    <a class="self-select__door self-select__door--b" href="/find-it/">
+      <div class="self-select__door-inner">
+        <p class="self-select__tag">You need the map</p>
+        <h2 class="self-select__headline">Find It</h2>
+        <p class="self-select__body">You don't have a 20-person security team. You have a list of tools people say they're using — and a longer list of tools they actually are. You need to close that gap before it becomes an incident.</p>
+        <span class="self-select__cta">See how it works →</span>
+      </div>
+    </a>
+  </div>
+
+  <div class="feat-lead">
+    <p class="feat-lead__label">What Aurora Does</p>
+  </div>
+
+  <p class="feat-guide">Three things Aurora does that your current stack doesn't.</p>
+
+  <section class="section section--wide" style="text-align: left; justify-items: start; margin-top: 0;">
+    <div class="home-section">
+      <div>
+        <p class="home-section__label">Ownership</p>
+        <h2 class="home-section__headline">Ownership resolution is the hardest problem in identity governance.</h2>
+        <p class="home-section__body">Every tool can show you the account. Almost none can tell you who in the business owns it, whether it's still needed, or who to call when you need to shut it down. Aurora maps every discovered identity — especially service accounts — to a business owner. Not a technical owner. The person who can answer the question.</p>
+      </div>
+      <div class="terminal" role="img" aria-label="Example register entry showing resolved ownership">
+        <div class="terminal__bar">
+          <span class="terminal__dot terminal__dot--red"></span>
+          <span class="terminal__dot terminal__dot--amber"></span>
+          <span class="terminal__dot terminal__dot--green"></span>
+          <span class="terminal__path">register entry — ownership resolved</span>
+        </div>
+        <div class="terminal__body"><span class="t-dim">{</span>
+  <span class="t-key">"service"</span><span class="t-dim">:</span>     <span class="t-str">"ChatGPT"</span><span class="t-dim">,</span>
+  <span class="t-key">"domain"</span><span class="t-dim">:</span>      <span class="t-str">"openai.com"</span><span class="t-dim">,</span>
+  <span class="t-key">"category"</span><span class="t-dim">:</span>    <span class="t-str">"AI tool — general purpose"</span><span class="t-dim">,</span>
+  <span class="t-key">"identity"</span><span class="t-dim">:</span>    <span class="t-uuid">"a3f7c2d1-..."</span><span class="t-dim">,</span>
+  <span class="t-key">"owner"</span><span class="t-dim">:</span>       <span class="t-str">"M. Chen, Engineering"</span><span class="t-dim">,</span>
+  <span class="t-key">"risk_score"</span><span class="t-dim">:</span>  <span class="t-str">"high"</span><span class="t-dim">,</span>
+  <span class="t-key">"ownership"</span><span class="t-dim">:</span>   <span class="t-str">"owned"</span><span class="t-dim">,</span>
+  <span class="t-key">"first_seen"</span><span class="t-dim">:</span>  <span class="t-num">1736849520000</span><span class="t-dim">,</span>
+  <span class="t-key">"last_seen"</span><span class="t-dim">:</span>   <span class="t-num">1741526400183</span>
+<span class="t-dim">}</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--wide" style="text-align: left; justify-items: start;">
+    <div class="home-section home-section--reverse">
+      <div>
+        <p class="home-section__label">The register</p>
+        <h2 class="home-section__headline">A live register of every AI tool and system in use across your org.</h2>
+        <p class="home-section__body">Not a snapshot. Not a report you run quarterly. A working register — discovered tools against known tools, updated continuously, with department-level attribution and usage context. When an auditor asks what AI tools you're using, you open Aurora.</p>
+      </div>
+      <div class="live-feed" role="region" aria-label="Animated Aurora identity register example">
+        <div class="live-feed__header">
+          <span class="live-feed__title">Aurora identity register</span>
+          <span class="live-feed__live">Live</span>
+        </div>
+        <div class="live-feed__stats">
+          <div class="live-feed__stat">
+            <span class="live-feed__stat-num">438</span>
+            <span class="live-feed__stat-label">Identities</span>
+          </div>
+          <div class="live-feed__stat">
+            <span class="live-feed__stat-num live-feed__stat-num--alert">91</span>
+            <span class="live-feed__stat-label">Unowned</span>
+          </div>
+          <div class="live-feed__stat">
+            <span class="live-feed__stat-num live-feed__stat-num--warn">34</span>
+            <span class="live-feed__stat-label">High risk</span>
+          </div>
+        </div>
+        <div class="live-feed__cols" aria-hidden="true">
+          <span class="live-feed__col-head">Tool</span>
+          <span class="live-feed__col-head">Department</span>
+          <span class="live-feed__col-head">Owner</span>
+          <span class="live-feed__col-head">Risk</span>
+          <span class="live-feed__col-head">Status</span>
+        </div>
+        <div class="live-feed__rows">
+          <div class="live-feed__row live-feed__row--new">
+            <span class="live-feed__tool">ChatGPT <span class="live-feed__tool-new">New</span></span>
+            <span class="live-feed__dept">Engineering</span>
+            <span class="live-feed__owner">— unresolved</span>
+            <span class="live-feed__badge live-feed__badge--high">High</span>
+            <span class="live-feed__badge live-feed__badge--unowned">Unowned</span>
+          </div>
+          <div class="live-feed__row">
+            <span class="live-feed__tool">Cursor AI</span>
+            <span class="live-feed__dept">Engineering</span>
+            <span class="live-feed__owner">M. Chen</span>
+            <span class="live-feed__badge live-feed__badge--med">Med</span>
+            <span class="live-feed__badge live-feed__badge--owned">Owned</span>
+          </div>
+          <div class="live-feed__row">
+            <span class="live-feed__tool">svc-deploy-prod</span>
+            <span class="live-feed__dept">DevOps</span>
+            <span class="live-feed__owner">S. Abdi</span>
+            <span class="live-feed__badge live-feed__badge--high">High</span>
+            <span class="live-feed__badge live-feed__badge--owned">Owned</span>
+          </div>
+          <div class="live-feed__row">
+            <span class="live-feed__tool">Notion AI</span>
+            <span class="live-feed__dept">Marketing</span>
+            <span class="live-feed__owner">— unresolved</span>
+            <span class="live-feed__badge live-feed__badge--med">Med</span>
+            <span class="live-feed__badge live-feed__badge--unowned">Unowned</span>
+          </div>
+          <div class="live-feed__row">
+            <span class="live-feed__tool">Midjourney</span>
+            <span class="live-feed__dept">Design</span>
+            <span class="live-feed__owner">D. Park</span>
+            <span class="live-feed__badge live-feed__badge--low">Low</span>
+            <span class="live-feed__badge live-feed__badge--owned">Owned</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--wide" style="text-align: left; justify-items: start;">
+    <div class="home-section">
+      <div>
+        <p class="home-section__label">The sensor</p>
+        <h2 class="home-section__headline">One sensor. Browser-based. Privacy-friendly by design.</h2>
+        <p class="home-section__body">Aurora's browser sensor captures what people are actually using — not what they say they're using. High-fidelity signal, zero raw data exfiltration, runs entirely inside your cloud environment. Your data stays there.</p>
+      </div>
+      <div class="sensor-flow">
+        <div class="sensor-flow__header">
+          <span class="sensor-flow__title">How Aurora sees your environment</span>
+          <span class="sensor-flow__live">Live</span>
+        </div>
+        <div class="sensor-flow__steps">
+          <div class="sensor-flow__step">
+            <div class="sensor-flow__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <div>
+              <p class="sensor-flow__step-name">Browser</p>
+            </div>
+          </div>
+          <div class="sensor-flow__connector">
+            <div class="sensor-flow__connector-track"><span class="sensor-flow__dot"></span></div>
+          </div>
+          <div class="sensor-flow__step">
+            <div class="sensor-flow__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/><line x1="16" y1="8" x2="2" y2="22"/><line x1="17.5" y1="15" x2="9" y2="15"/></svg>
+            </div>
+            <div>
+              <p class="sensor-flow__step-name">Extension</p>
+            </div>
+          </div>
+          <div class="sensor-flow__connector">
+            <div class="sensor-flow__connector-track"><span class="sensor-flow__dot"></span></div>
+          </div>
+          <div class="sensor-flow__step">
+            <div class="sensor-flow__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <div>
+              <p class="sensor-flow__step-name">Cloud</p>
+            </div>
+          </div>
+          <div class="sensor-flow__connector">
+            <div class="sensor-flow__connector-track"><span class="sensor-flow__dot"></span></div>
+          </div>
+          <div class="sensor-flow__step">
+            <div class="sensor-flow__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+            </div>
+            <div>
+              <p class="sensor-flow__step-name">Register</p>
+            </div>
+          </div>
+        </div>
+        <div class="sensor-flow__footer">
+          <span class="sensor-flow__proof">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Zero raw data exfiltration
+          </span>
+          <span class="sensor-flow__sep">·</span>
+          <span class="sensor-flow__proof">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Runs inside your cloud
+          </span>
+          <span class="sensor-flow__sep">·</span>
+          <span class="sensor-flow__proof">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Updates continuously
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+{% set ctaTitle = "See what Aurora finds that <br>your stack doesn't." %}
+{% set ctaSubtext = "Book a 30-minute session. We'll show you Aurora against your actual environment within 48 hours." %}
+{% set ctaButtonLabel = "Book a session" %}
+{% set ctaButtonAriaLabel = "Book a session with the Aurora Identity team" %}
+{% include "cta.njk" %}

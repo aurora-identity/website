@@ -1,0 +1,46 @@
+flowchart LR
+
+%% =====================================
+%% TRUST / LOGICAL ZONES
+%% =====================================
+
+subgraph CLIENT["Security Engineer"]
+    REP["Reporting App<br>Browser-based dashboard"]
+end
+
+subgraph SOURCES["Telemetry ingestion sources"]
+    LOGS["Proxy/Firewall/SIEM"]
+    BE["Browser Extension"]
+end
+
+subgraph CORE["Core Processing Layer<br>Risk Engine and APIs"]
+    direction TB
+    Server["Server"]
+    RE["Risk Engine"]
+    AUR["Aurora DB"]
+end
+
+subgraph DATA["Data and Analytics Layer"]
+    CLICK["Clickhouse DB<br>Analytical db and 30/90 days storage"]
+end
+
+%% =====================================
+%% DATA FLOWS
+%% =====================================
+
+%% Ingestion flows
+BE -->|Browser Telemetry| Server
+LOGS -->|Pre-processed security events| Server
+
+%% Core processing
+RE -->|Service risk lookups| AUR
+AUR -->|Service risk| RE
+
+%% Long-term storage and analytics
+Server -->|Telemetry| CLICK
+CLICK -->|Analytical queries| Server
+
+%% Reporting and insights
+Server -->|Service risk queries| RE
+RE -->|Aggregated risk results| Server
+Server -->|Risk insights| REP

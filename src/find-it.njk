@@ -1,0 +1,218 @@
+---
+title: "Find It — Aurora Identity"
+layout: "layouts/base.njk"
+permalink: "/find-it/"
+---
+
+<div class="container">
+<div class="audience-page">
+
+  <div class="audience-page__header">
+    <span class="audience-page__tag">For teams building their security program</span>
+    <h1 class="audience-page__headline">High-fidelity signal.<br>No new attack surface.</h1>
+    <p class="audience-page__lead">Aurora runs one sensor — browser-based, inside your workforce environment and cloud, zero raw data exfiltration. Here's exactly what it touches.</p>
+    <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center;">
+      <a class="btn btn-primary" href="{{ site.calendarUrl }}" target="_blank" rel="noopener noreferrer" data-cta>Talk to an engineer</a>
+      <a class="btn btn-outline" href="/docs/">Read the docs</a>
+    </div>
+  </div>
+
+  <div class="feature-section">
+    <div class="feature-section__content">
+      <p class="feature-section__eyebrow">The sensor</p>
+      <h2 class="feature-section__title">One data source: browser telemetry.</h2>
+      <p class="feature-section__body">The Aurora sensor operates at the browser layer — capturing AI tool usage, account attribution, and access patterns without touching your network, intercepting traffic, or requiring changes to your IAM or SSO configuration. Deployed inside your AWS, GCP, or Azure environment. Data stays there.</p>
+    </div>
+    <div class="terminal" role="img" aria-label="Example Aurora ingest API telemetry payload">
+      <div class="terminal__bar">
+        <span class="terminal__dot terminal__dot--red"></span>
+        <span class="terminal__dot terminal__dot--amber"></span>
+        <span class="terminal__dot terminal__dot--green"></span>
+        <span class="terminal__path">POST /ingest — telemetry payload</span>
+      </div>
+      <div class="terminal__body"><span class="t-comment">// Aurora browser extension — ingest payload</span>
+<span class="t-comment">// Sent per browser request, HTTPS</span>
+
+<span class="t-dim">{</span>
+  <span class="t-key">"identity"</span><span class="t-dim">:</span>  <span class="t-uuid">"a3f7c2d1-9b4e-4f82-bc3a-1e2f8d9c0a7b"</span><span class="t-dim">,</span>
+  <span class="t-key">"url"</span><span class="t-dim">:</span>       <span class="t-str">"https://chat.openai.com/api/conversation"</span><span class="t-dim">,</span>
+  <span class="t-key">"method"</span><span class="t-dim">:</span>    <span class="t-str">"POST"</span><span class="t-dim">,</span>
+  <span class="t-key">"timestamp"</span><span class="t-dim">:</span> <span class="t-num">1741526400183</span>
+<span class="t-dim">}</span>
+
+<span class="t-comment">// That's the entire payload.</span>
+<span class="t-comment">// No request body. No response. No cookies.</span>
+<span class="t-comment">// No personal data. No content. Nothing else.</span></div>
+    </div>
+  </div>
+
+  <div class="feature-section feature-section--reverse">
+    <div class="feature-section__content">
+      <p class="feature-section__eyebrow">Privacy model</p>
+      <h2 class="feature-section__title">Privacy is an architecture decision, not a policy statement.</h2>
+      <p class="feature-section__body">Raw telemetry never leaves your environment. Aurora processes it inside your cloud and surfaces governed, aggregated signals. Retention policies are customer-controlled. It's designed to surface accounts and tools that governance processes need to cover.</p>
+    </div>
+    <div class="terminal" role="img" aria-label="Data residency breakdown">
+      <div class="terminal__bar">
+        <span class="terminal__dot terminal__dot--red"></span>
+        <span class="terminal__dot terminal__dot--amber"></span>
+        <span class="terminal__dot terminal__dot--green"></span>
+        <span class="terminal__path">data residency</span>
+      </div>
+      <div class="terminal__body"><span class="t-label">Stays in your environment</span>
+
+<span class="t-str">✓</span> Raw telemetry events
+<span class="t-str">✓</span> Identity UUIDs
+<span class="t-str">✓</span> Risk scores + ownership assignments
+<span class="t-str">✓</span> The identity register
+<span class="t-str">✓</span> Identity mappings
+<span class="t-str">✓</span> All processed outputs
+
+
+<span class="t-label">Never leaves your environment</span>
+
+<span class="t-comment">No telemetry to Aurora infrastructure.</span>
+<span class="t-comment">No model training on your data.</span>
+<span class="t-comment">No analytics pipeline outside your cloud.</span>
+
+<span class="t-muted">Aurora DB (service knowledge base)</span>
+<span class="t-muted">is the only external component —</span>
+<span class="t-muted">read-only metadata, not your data.</span></div>
+    </div>
+  </div>
+
+  <div class="feature-section">
+    <div class="feature-section__content">
+      <p class="feature-section__eyebrow">Integration surface</p>
+      <h2 class="feature-section__title">Aurora doesn't replace your identity stack. It adds the layer your stack is missing.</h2>
+      <ul class="feature-section__list">
+        <li><strong>No changes to Okta.</strong> No modifications to your AD configuration. No IAM policy updates required.</li>
+        <li><strong>The sensor is additive.</strong> You get coverage for the accounts and tools that exist outside your managed identity perimeter — without touching what's inside it.</li>
+        <li><strong>Deployed via your existing browser MDM:</strong> Chrome Enterprise, Intune, or Jamf.</li>
+      </ul>
+    </div>
+    <div class="pipeline">
+      <p class="pipeline__label">Full data pipeline</p>
+      <div class="pipeline__nodes">
+        <div class="pipeline__node">
+          <div class="pipeline__node-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <span class="pipeline__node-name">Browser</span>
+        </div>
+        <div class="pipeline__arrow find-it-padding">
+          <div class="pipeline__arrow-track"><span class="pipeline__dot"></span></div>
+        </div>
+        <div class="pipeline__node">
+          <div class="pipeline__node-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/><line x1="16" y1="8" x2="2" y2="22"/><line x1="17.5" y1="15" x2="9" y2="15"/></svg>
+          </div>
+          <span class="pipeline__node-name">Extension</span>
+        </div>
+        <div class="pipeline__arrow find-it-padding">
+          <div class="pipeline__arrow-track"><span class="pipeline__dot"></span></div>
+        </div>
+        <div class="pipeline__node">
+          <div class="pipeline__node-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <span class="pipeline__node-name">Cloud</span>
+        </div>
+        <div class="pipeline__arrow find-it-padding">
+          <div class="pipeline__arrow-track"><span class="pipeline__dot"></span></div>
+        </div>
+        <div class="pipeline__node">
+          <div class="pipeline__node-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+          </div>
+          <span class="pipeline__node-name">Register</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="feature-section feature-section--reverse">
+    <div class="feature-section__content">
+      <p class="feature-section__eyebrow">What you get</p>
+      <h2 class="feature-section__title">The register. The feed. The ownership layer.</h2>
+      <ul class="feature-section__list">
+        <li><strong>Raw usage feed:</strong> who is using which AI tools, from which department, and how often.</li>
+        <li><strong>Discovered vs. known:</strong> your approved tool list against what's actually running.</li>
+        <li><strong>Ownership resolution:</strong> service accounts mapped to owners, not just technical metadata.</li>
+        <li><strong>Actionable findings:</strong> block or permit discovered tools based on risk and ownership.</li>
+      </ul>
+    </div>
+    <div class="live-feed" role="region" aria-label="Example identity register with ownership status">
+      <div class="live-feed__header">
+        <span class="live-feed__title">Aurora identity register</span>
+        <span class="live-feed__live">Live</span>
+      </div>
+      <div class="live-feed__stats">
+        <div class="live-feed__stat">
+          <span class="live-feed__stat-num">438</span>
+          <span class="live-feed__stat-label">Identities</span>
+        </div>
+        <div class="live-feed__stat">
+          <span class="live-feed__stat-num live-feed__stat-num--alert">91</span>
+          <span class="live-feed__stat-label">Unowned</span>
+        </div>
+        <div class="live-feed__stat">
+          <span class="live-feed__stat-num live-feed__stat-num--warn">34</span>
+          <span class="live-feed__stat-label">High risk</span>
+        </div>
+      </div>
+      <div class="live-feed__cols" aria-hidden="true">
+        <span class="live-feed__col-head">Tool</span>
+        <span class="live-feed__col-head">Department</span>
+        <span class="live-feed__col-head">Owner</span>
+        <span class="live-feed__col-head">Risk</span>
+        <span class="live-feed__col-head">Status</span>
+      </div>
+      <div class="live-feed__rows">
+        <div class="live-feed__row live-feed__row--new">
+          <span class="live-feed__tool">ChatGPT <span class="live-feed__tool-new">New</span></span>
+          <span class="live-feed__dept">Engineering</span>
+          <span class="live-feed__owner">— unresolved</span>
+          <span class="live-feed__badge live-feed__badge--high">High</span>
+          <span class="live-feed__badge live-feed__badge--unowned">Unowned</span>
+        </div>
+        <div class="live-feed__row">
+          <span class="live-feed__tool">Cursor AI</span>
+          <span class="live-feed__dept">Engineering</span>
+          <span class="live-feed__owner">M. Chen</span>
+          <span class="live-feed__badge live-feed__badge--med">Med</span>
+          <span class="live-feed__badge live-feed__badge--owned">Owned</span>
+        </div>
+        <div class="live-feed__row">
+          <span class="live-feed__tool">svc-deploy-prod</span>
+          <span class="live-feed__dept">DevOps</span>
+          <span class="live-feed__owner">S. Abdi</span>
+          <span class="live-feed__badge live-feed__badge--high">High</span>
+          <span class="live-feed__badge live-feed__badge--owned">Owned</span>
+        </div>
+        <div class="live-feed__row">
+          <span class="live-feed__tool">Notion AI</span>
+          <span class="live-feed__dept">Marketing</span>
+          <span class="live-feed__owner">— unresolved</span>
+          <span class="live-feed__badge live-feed__badge--med">Med</span>
+          <span class="live-feed__badge live-feed__badge--unowned">Unowned</span>
+        </div>
+        <div class="live-feed__row">
+          <span class="live-feed__tool">Midjourney</span>
+          <span class="live-feed__dept">Design</span>
+          <span class="live-feed__owner">D. Park</span>
+          <span class="live-feed__badge live-feed__badge--low">Low</span>
+          <span class="live-feed__badge live-feed__badge--owned">Owned</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+{% set ctaTitle = "Not ready to talk? Start here." %}
+{% set ctaSubtext = "Walk through how Aurora works, what it captures, and what you'd see in your environment. When you're ready, we're a message away." %}
+{% set ctaButtonLabel = "Talk to an engineer" %}
+{% set ctaButtonAriaLabel = "Talk to an Aurora Identity engineer" %}
+{% include "cta.njk" %}

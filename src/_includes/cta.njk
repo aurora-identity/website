@@ -1,0 +1,32 @@
+{% set ctaId = "cta-demo-title-" + (page.fileSlug or "section") %}
+{% set ctaTitleText = ctaTitle | default(site.brand.demoIntro, true) %}
+{% set ctaSubtextText = ctaSubtext | default(site.brand.demoReassurance, true) %}
+{% set ctaButtonLabelText = ctaButtonLabel | default(en.cta.bookDemo, true) %}
+{% set ctaButtonAriaLabelText = ctaButtonAriaLabel | default(ctaButtonLabelText, true) %}
+{% set ctaButtonTargetValue = ctaButtonTarget | default('_blank', true) %}
+{% set ctaButtonRelValue = ctaButtonRel | default('noopener noreferrer', true) %}
+<section class="cta-demo">
+  <div class="cta-demo__inner">
+    <div class="cta-demo__terminal">
+      <div class="cta-demo__terminal-bar">
+        <span class="cta-demo__dot cta-demo__dot--r"></span>
+        <span class="cta-demo__dot cta-demo__dot--a"></span>
+        <span class="cta-demo__dot cta-demo__dot--g"></span>
+        <span class="cta-demo__terminal-path">aurora — book-session</span>
+      </div>
+      <div class="cta-demo__terminal-body">
+        <p class="cta-demo__prompt">aurora run demo --env production <span class="cta-demo__cursor"></span></p>
+        <h2 id="{{ ctaId }}" class="cta-demo__title">{{ ctaTitleText | safe }}</h2>
+        <p class="cta-demo__subtext">{{ ctaSubtextText }}</p>
+        <div class="cta-demo__actions">
+          <a class="cta-demo__button" data-cta href="{{ site.calendarUrl }}" aria-label="{{ ctaButtonAriaLabelText }}" target="{{ ctaButtonTargetValue }}"{% if ctaButtonRelValue %} rel="{{ ctaButtonRelValue }}"{% endif %}>
+            <span>{{ ctaButtonLabelText }}</span>
+            <span aria-hidden="true">→</span>
+          </a>
+          <a href="/how-it-works/" class="cta-demo__button-secondary">See how it works</a>
+        </div>
+        <p class="cta-demo__trust"><span aria-hidden="true">🔒</span> No sandbox · No slideshow · Your environment</p>
+      </div>
+    </div>
+  </div>
+</section>

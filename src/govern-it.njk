@@ -1,0 +1,220 @@
+---
+title: "Govern It — Aurora Identity"
+layout: "layouts/base.njk"
+permalink: "/govern-it/"
+---
+
+<div class="container">
+<div class="audience-page">
+
+  <div class="audience-page__header">
+    <span class="audience-page__tag">For teams with mature security stack</span>
+    <h1 class="audience-page__headline">Your identity stack is excellent.<br>Your business context isn't in it.</h1>
+    <p class="audience-page__lead">You know the account exists. You know it's a risk. What you don't know is whether it's safe to turn off — and who in the business can tell you.</p>
+    <a class="btn btn-primary" href="{{ site.calendarUrl }}" target="_blank" rel="noopener noreferrer" data-cta>Book a session</a>
+  </div>
+
+  <div class="feature-section">
+    <div class="feature-section__content">
+      <p class="feature-section__eyebrow">The gap</p>
+      <h2 class="feature-section__title">The most dangerous accounts aren't the ones your tools can't see.</h2>
+      <p class="feature-section__body">They're the ones your tools see perfectly — and nobody in the business can explain.</p>
+      <ul class="feature-section__list">
+        <li>Service accounts with no owner. AI tools tied to departed employees.</li>
+        <li>Shadow access created outside your SSO by teams that needed to move fast and never came back to clean it up.</li>
+        <li>The technical signal is there. The business context is missing. That gap is where incidents live.</li>
+      </ul>
+    </div>
+    <div class="terminal" role="img" aria-label="Example service account register entry showing unresolved ownership">
+      <div class="terminal__bar">
+        <span class="terminal__dot terminal__dot--red"></span>
+        <span class="terminal__dot terminal__dot--amber"></span>
+        <span class="terminal__dot terminal__dot--green"></span>
+        <span class="terminal__path">register entry — unresolved ownership</span>
+      </div>
+      <div class="terminal__body"><span class="t-dim">{</span>
+  <span class="t-key">"service"</span><span class="t-dim">:</span>     <span class="t-str">"svc-ml-pipeline"</span><span class="t-dim">,</span>
+  <span class="t-key">"domain"</span><span class="t-dim">:</span>      <span class="t-str">"internal"</span><span class="t-dim">,</span>
+  <span class="t-key">"category"</span><span class="t-dim">:</span>    <span class="t-str">"Service account — ML workload"</span><span class="t-dim">,</span>
+  <span class="t-key">"identity"</span><span class="t-dim">:</span>    <span class="t-uuid">"f9a2e1c4-..."</span><span class="t-dim">,</span>
+  <span class="t-key">"owner"</span><span class="t-dim">:</span>       <span class="t-str">"— unresolved —"</span><span class="t-dim">,</span>
+  <span class="t-key">"risk_score"</span><span class="t-dim">:</span>  <span class="t-str">"high"</span><span class="t-dim">,</span>
+  <span class="t-key">"ownership"</span><span class="t-dim">:</span>   <span class="t-str">"unowned"</span><span class="t-dim">,</span>
+  <span class="t-key">"first_seen"</span><span class="t-dim">:</span>  <span class="t-num">1729382400000</span><span class="t-dim">,</span>
+  <span class="t-key">"last_seen"</span><span class="t-dim">:</span>   <span class="t-num">1741526400183</span>
+<span class="t-dim">}</span>
+
+<span class="t-comment">// owner: unresolved. No business owner on record.</span>
+<span class="t-comment">// Tool can see it. Nobody can explain it.</span></div>
+    </div>
+  </div>
+
+  <div class="feature-section feature-section--reverse">
+    <div class="feature-section__content">
+      <p class="feature-section__eyebrow">What Aurora gives you</p>
+      <h2 class="feature-section__title">Every account. Named. Owned. Covered.</h2>
+      <ul class="feature-section__list">
+        <li><strong>A register of every AI tool in use.</strong> Auditable. Continuously updated.</li>
+        <li><strong>Ownership mapped to real people,</strong> not just technical metadata.</li>
+        <li><strong>The gap between approved tools and what's actually running.</strong> That delta, clearly.</li>
+        <li><strong>Offboarding coverage</strong> that doesn't rely on people remembering to clean up.</li>
+        <li><strong>A signal you can take into a board conversation</strong> without translating it.</li>
+      </ul>
+    </div>
+    <div class="live-feed" role="region" aria-label="Example identity register with ownership status">
+      <div class="live-feed__header">
+        <span class="live-feed__title">Aurora identity register</span>
+        <span class="live-feed__live">Live</span>
+      </div>
+      <div class="live-feed__stats">
+        <div class="live-feed__stat">
+          <span class="live-feed__stat-num">438</span>
+          <span class="live-feed__stat-label">Identities</span>
+        </div>
+        <div class="live-feed__stat">
+          <span class="live-feed__stat-num live-feed__stat-num--alert">91</span>
+          <span class="live-feed__stat-label">Unowned</span>
+        </div>
+        <div class="live-feed__stat">
+          <span class="live-feed__stat-num live-feed__stat-num--warn">34</span>
+          <span class="live-feed__stat-label">High risk</span>
+        </div>
+      </div>
+      <div class="live-feed__cols" aria-hidden="true">
+        <span class="live-feed__col-head">Tool</span>
+        <span class="live-feed__col-head">Department</span>
+        <span class="live-feed__col-head">Owner</span>
+        <span class="live-feed__col-head">Risk</span>
+        <span class="live-feed__col-head">Status</span>
+      </div>
+      <div class="live-feed__rows">
+        <div class="live-feed__row live-feed__row--new">
+          <span class="live-feed__tool">svc-ml-pipeline <span class="live-feed__tool-new">New</span></span>
+          <span class="live-feed__dept">Engineering</span>
+          <span class="live-feed__owner">— unresolved</span>
+          <span class="live-feed__badge live-feed__badge--high">High</span>
+          <span class="live-feed__badge live-feed__badge--unowned">Unowned</span>
+        </div>
+        <div class="live-feed__row">
+          <span class="live-feed__tool">ChatGPT</span>
+          <span class="live-feed__dept">Marketing</span>
+          <span class="live-feed__owner">J. Rivera</span>
+          <span class="live-feed__badge live-feed__badge--med">Med</span>
+          <span class="live-feed__badge live-feed__badge--owned">Owned</span>
+        </div>
+        <div class="live-feed__row">
+          <span class="live-feed__tool">svc-deploy-prod</span>
+          <span class="live-feed__dept">DevOps</span>
+          <span class="live-feed__owner">S. Abdi</span>
+          <span class="live-feed__badge live-feed__badge--high">High</span>
+          <span class="live-feed__badge live-feed__badge--owned">Owned</span>
+        </div>
+        <div class="live-feed__row">
+          <span class="live-feed__tool">Notion AI</span>
+          <span class="live-feed__dept">Marketing</span>
+          <span class="live-feed__owner">— unresolved</span>
+          <span class="live-feed__badge live-feed__badge--med">Med</span>
+          <span class="live-feed__badge live-feed__badge--unowned">Unowned</span>
+        </div>
+        <div class="live-feed__row">
+          <span class="live-feed__tool">Cursor AI</span>
+          <span class="live-feed__dept">Engineering</span>
+          <span class="live-feed__owner">M. Chen</span>
+          <span class="live-feed__badge live-feed__badge--low">Low</span>
+          <span class="live-feed__badge live-feed__badge--owned">Owned</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="feature-section">
+    <div class="feature-section__content">
+      <p class="feature-section__eyebrow">The practical test</p>
+      <h2 class="feature-section__title">If someone on your team left last month, can you name every service account and AI tool access they had?</h2>
+      <p class="feature-section__body">If the answer is "probably" or "I'd have to check" — that's the gap Aurora closes.</p>
+    </div>
+    <div class="feature-panel">
+      <p class="feature-panel__label">Offboarding workflow</p>
+      <p class="feature-panel__title">Complete offboarding, not partial</p>
+      <div class="pipeline pipeline--vertical" style="padding: 1.25rem; box-shadow: none; border: none; background: none;">
+        <div class="pipeline__nodes">
+          <div class="pipeline__node">
+            <div class="pipeline__node-icon" style="width: 36px; height: 36px; font-size: 1rem;">📋</div>
+            <div>
+              <span class="pipeline__node-name">Employee departure</span>
+              <span class="pipeline__node-sub" style="display: block;">HR or IT event</span>
+            </div>
+          </div>
+          <div class="pipeline__arrow">
+            <div class="pipeline__arrow-track"><span class="pipeline__dot"></span></div>
+          </div>
+          <div class="pipeline__node">
+            <div class="pipeline__node-icon" style="width: 36px; height: 36px; font-size: 1rem;">≡</div>
+            <div>
+              <span class="pipeline__node-name">Full account list surfaced</span>
+              <span class="pipeline__node-sub" style="display: block;">SSO + shadow identity</span>
+            </div>
+          </div>
+          <div class="pipeline__arrow">
+            <div class="pipeline__arrow-track"><span class="pipeline__dot"></span></div>
+          </div>
+          <div class="pipeline__node">
+            <div class="pipeline__node-icon" style="width: 36px; height: 36px; font-size: 1rem;">◎</div>
+            <div>
+              <span class="pipeline__node-name">Service accounts flagged</span>
+              <span class="pipeline__node-sub" style="display: block;">Reassigned, not orphaned</span>
+            </div>
+          </div>
+          <div class="pipeline__arrow">
+            <div class="pipeline__arrow-track"><span class="pipeline__dot"></span></div>
+          </div>
+          <div class="pipeline__node">
+            <div class="pipeline__node-icon" style="width: 36px; height: 36px; font-size: 1rem;">✓</div>
+            <div>
+              <span class="pipeline__node-name">Closed-loop confirmation</span>
+              <span class="pipeline__node-sub" style="display: block;">Everything actioned</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="feature-section feature-section--reverse">
+    <div class="feature-section__content">
+      <p class="feature-section__eyebrow">Headline capability</p>
+      <h2 class="feature-section__title">Ownership resolution is the hardest problem in identity governance.</h2>
+      <p class="feature-section__body">Every tool can show you the account. Almost none can tell you who in the business owns it, whether it's still needed, or who to call when you need to shut it down. Aurora maps every discovered identity — especially service accounts — to a business owner. Not a technical owner. The person who can answer the question.</p>
+    </div>
+    <div class="terminal" role="img" aria-label="Example register entry showing resolved ownership">
+      <div class="terminal__bar">
+        <span class="terminal__dot terminal__dot--red"></span>
+        <span class="terminal__dot terminal__dot--amber"></span>
+        <span class="terminal__dot terminal__dot--green"></span>
+        <span class="terminal__path">register entry — ownership resolved</span>
+      </div>
+      <div class="terminal__body"><span class="t-dim">{</span>
+  <span class="t-key">"service"</span><span class="t-dim">:</span>     <span class="t-str">"svc-ml-pipeline"</span><span class="t-dim">,</span>
+  <span class="t-key">"domain"</span><span class="t-dim">:</span>      <span class="t-str">"internal"</span><span class="t-dim">,</span>
+  <span class="t-key">"category"</span><span class="t-dim">:</span>    <span class="t-str">"Service account — ML workload"</span><span class="t-dim">,</span>
+  <span class="t-key">"identity"</span><span class="t-dim">:</span>    <span class="t-uuid">"f9a2e1c4-..."</span><span class="t-dim">,</span>
+  <span class="t-key">"owner"</span><span class="t-dim">:</span>       <span class="t-str">"T. Okafor, Platform Engineering"</span><span class="t-dim">,</span>
+  <span class="t-key">"risk_score"</span><span class="t-dim">:</span>  <span class="t-str">"high"</span><span class="t-dim">,</span>
+  <span class="t-key">"ownership"</span><span class="t-dim">:</span>   <span class="t-str">"owned"</span><span class="t-dim">,</span>
+  <span class="t-key">"first_seen"</span><span class="t-dim">:</span>  <span class="t-num">1729382400000</span><span class="t-dim">,</span>
+  <span class="t-key">"last_seen"</span><span class="t-dim">:</span>   <span class="t-num">1741526400183</span>
+<span class="t-dim">}</span>
+
+<span class="t-comment">// owner: resolved. Business owner named.</span>
+<span class="t-comment">// Safe to action. Auditable.</span></div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+{% set ctaTitle = "We don't do long pilots." %}
+{% set ctaSubtext = "Visibility in a week. If Aurora finds something you didn't know about, we walk you through it. If it doesn't, that's worth knowing too." %}
+{% set ctaButtonLabel = "Book a session" %}
+{% set ctaButtonAriaLabel = "Book a session with the Aurora Identity team" %}
+{% include "cta.njk" %}

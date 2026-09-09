@@ -1,0 +1,1 @@
+( sleep 2 && npx -y open-cli http://localhost:8080) & npx @11ty/eleventy --serve --port=8080
