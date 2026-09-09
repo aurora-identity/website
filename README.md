@@ -23,22 +23,22 @@ npm run dev      # http://localhost:8080
 
 ./run.sh does the same and opens the browser for you.
 
-### Build
+## Build
 
 ```bash
 npm run build    # writes the static site to _site/
 ```
 
-- "_site/" is generated output and is not committed. Eleventy does not remove pages whose
+`_site` is generated output and is not committed. Eleventy does not remove pages whose
 source has gone, so delete the whole directory and rebuild if it ever holds stale files.
 
-### Layout
+## Layout
 
 - src/ — pages, docs, includes and assets.
 - src/_data/ — site-wide values such as the URL, tagline and contact details.
 - eleventy.config.cjs — Eleventy configuration, passthrough copies and CSS minification.
 
 
-# License
+## License
 
-MIT. See LICENSE.
+MIT. See [LICENSE](LICENSE).
