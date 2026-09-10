@@ -9,8 +9,8 @@ using which AI tools, with all processing staying inside your own cloud.
 
 This repository holds the website only. The product lives in two other repositories:
 
-- [browser-extension-public](https://github.com/aurora-identity/browser-extension-public) — the browser sensor that collects usage telemetry.
-- [server-public](https://github.com/aurora-identity/server-public) — the ingest, correlation and reporting backend.
+- [browser-extension](https://github.com/aurora-identity/browser-extension) — the browser sensor that collects usage telemetry.
+- [risk-engine](https://github.com/aurora-identity/risk-engine) — the ingest, scoring and reporting backend.
 
 ## Local setup
 
