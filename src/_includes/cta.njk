@@ -26,6 +26,7 @@
         <p class="cta-demo__subtext">{{ ctaSubtextText }}</p>
         <div class="cta-demo__actions">
           <a class="cta-demo__button" data-cta href="{{ ctaButtonHrefValue }}" aria-label="{{ ctaButtonAriaLabelText }}" target="{{ ctaButtonTargetValue }}"{% if ctaButtonRelValue %} rel="{{ ctaButtonRelValue }}"{% endif %}>
+            {% if ctaButtonHrefValue == site.repoUrl %}{% include "github-icon.njk" %}{% endif %}
             <span>{{ ctaButtonLabelText }}</span>
             <span aria-hidden="true">→</span>
           </a>

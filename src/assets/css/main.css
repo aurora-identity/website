@@ -1519,6 +1519,9 @@ body a:hover {
   border-radius: 6px;
   white-space: nowrap;
   transition: background 0.15s, border-color 0.15s;
+}
+
+.footer-brand-desc + .footer-brand-cta {
   margin-left: auto;
 }
 
