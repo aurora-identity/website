@@ -31,6 +31,7 @@ layout: docs.njk
     <li><a href="/docs/browser-extension/">Components</a> — start with the browser extension.</li>
     <li><a href="/docs/cloud-or-self-hosted/">Self-managed</a> — deployment in self-managed environments.</li>
     <li><a href="/docs/ingest/">Ingest API</a> — contract for browser telemetry ingestion.</li>
+    <li><a target="_blank" href="{{ site.repoUrl }}">Source code</a> — the risk engine and the <a target="_blank" href="{{ site.extensionRepoUrl }}">browser extension</a> on GitHub. Clone them and run Aurora yourself.</li>
   </ul>
 </section>
 

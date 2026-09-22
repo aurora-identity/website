@@ -353,6 +353,19 @@ body a:hover {
   color: #0c1117;
 }
 
+.btn-hero-secondary {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.28);
+  color: rgba(248, 250, 252, 0.88);
+}
+
+.btn-hero-secondary:hover,
+.btn-hero-secondary:focus-visible {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.45);
+  color: #ffffff;
+}
+
 .btn-nav {
   padding: 0.58rem 1.25rem;
   font-size: 0.86rem;
@@ -1284,6 +1297,7 @@ body a:hover {
 .cta-demo__terminal-body {
   padding: clamp(3rem, 6vw, 4.25rem);
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   justify-items: center;
   gap: 1.75rem;
   text-align: center;
@@ -1293,14 +1307,17 @@ body a:hover {
   font-family: var(--font-mono);
   font-size: 0.78rem;
   color: rgba(13,148,136,0.92);
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
+  display: grid;
+  gap: 0.35rem;
   margin: 0;
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  text-align: left;
 }
 
-.cta-demo__prompt::before {
-  content: '>';
+.cta-demo__prompt > span::before {
+  content: '> ';
   color: rgba(13,148,136,0.55);
 }
 

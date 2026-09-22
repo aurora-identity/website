@@ -73,6 +73,7 @@ permalink: "/partners/"
 
 {% set ctaTitle = "Become an Aurora MSP Partner" %}
 {% set ctaSubtext = "Tell us about your clients and service model. We will follow up with program details and next steps." %}
+{% set ctaButtonHref = site.contactUrl %}
 {% set ctaButtonLabel = "Apply to partner" %}
 {% set ctaButtonAriaLabel = "Apply to the Aurora MSP partner program" %}
 {% include "cta.njk" %}

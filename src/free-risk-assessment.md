@@ -75,8 +75,7 @@ permalink: "/free-risk-assessment/"
 
 {% set ctaTitle = "See what Aurora finds in your environment." %}
 {% set ctaSubtext = "We'll deploy to a pilot group, show you what Aurora finds, and walk through ownership resolution in a live environment." %}
-{% set ctaButtonLabel = "Book a live walkthrough" %}
-{% set ctaButtonAriaLabel = "Book a free risk assessment with the Aurora team" %}
-{% set ctaButtonTarget = "_blank" %}
-{% set ctaButtonRel = "noopener noreferrer" %}
+{% set ctaButtonHref = site.contactUrl %}
+{% set ctaButtonLabel = "Talk to us" %}
+{% set ctaButtonAriaLabel = "Ask the Aurora team for a free risk assessment on GitHub" %}
 {% include "cta.njk" %}

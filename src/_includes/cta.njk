@@ -1,7 +1,8 @@
 {% set ctaId = "cta-demo-title-" + (page.fileSlug or "section") %}
 {% set ctaTitleText = ctaTitle | default(site.brand.demoIntro, true) %}
 {% set ctaSubtextText = ctaSubtext | default(site.brand.demoReassurance, true) %}
-{% set ctaButtonLabelText = ctaButtonLabel | default(en.cta.bookDemo, true) %}
+{% set ctaButtonHrefValue = ctaButtonHref | default(site.repoUrl, true) %}
+{% set ctaButtonLabelText = ctaButtonLabel | default(en.cta.getCode, true) %}
 {% set ctaButtonAriaLabelText = ctaButtonAriaLabel | default(ctaButtonLabelText, true) %}
 {% set ctaButtonTargetValue = ctaButtonTarget | default('_blank', true) %}
 {% set ctaButtonRelValue = ctaButtonRel | default('noopener noreferrer', true) %}
@@ -12,20 +13,27 @@
         <span class="cta-demo__dot cta-demo__dot--r"></span>
         <span class="cta-demo__dot cta-demo__dot--a"></span>
         <span class="cta-demo__dot cta-demo__dot--g"></span>
-        <span class="cta-demo__terminal-path">aurora — book-session</span>
+        <span class="cta-demo__terminal-path">aurora — quickstart</span>
       </div>
       <div class="cta-demo__terminal-body">
-        <p class="cta-demo__prompt">aurora run demo --env production <span class="cta-demo__cursor"></span></p>
+        {% if ctaButtonHrefValue == site.repoUrl %}
+        <p class="cta-demo__prompt">
+          <span>git clone {{ site.repoUrl }}</span>
+          <span>docker compose up --build <span class="cta-demo__cursor"></span></span>
+        </p>
+        {% endif %}
         <h2 id="{{ ctaId }}" class="cta-demo__title">{{ ctaTitleText | safe }}</h2>
         <p class="cta-demo__subtext">{{ ctaSubtextText }}</p>
         <div class="cta-demo__actions">
-          <a class="cta-demo__button" data-cta href="{{ site.calendarUrl }}" aria-label="{{ ctaButtonAriaLabelText }}" target="{{ ctaButtonTargetValue }}"{% if ctaButtonRelValue %} rel="{{ ctaButtonRelValue }}"{% endif %}>
+          <a class="cta-demo__button" data-cta href="{{ ctaButtonHrefValue }}" aria-label="{{ ctaButtonAriaLabelText }}" target="{{ ctaButtonTargetValue }}"{% if ctaButtonRelValue %} rel="{{ ctaButtonRelValue }}"{% endif %}>
             <span>{{ ctaButtonLabelText }}</span>
             <span aria-hidden="true">→</span>
           </a>
-          <a href="/how-it-works/" class="cta-demo__button-secondary">See how it works</a>
+          {% if ctaButtonHrefValue != site.contactUrl %}
+          <a href="{{ site.contactUrl }}" class="cta-demo__button-secondary" target="_blank" rel="noopener noreferrer">{{ en.cta.talkToUs }} ↗</a>
+          {% endif %}
         </div>
-        <p class="cta-demo__trust"><span aria-hidden="true">🔒</span> No sandbox · No slideshow · Your environment</p>
+        <p class="cta-demo__trust"><span aria-hidden="true">🔒</span> Open source · No sandbox · Your environment</p>
       </div>
     </div>
   </div>

@@ -139,9 +139,5 @@ layout: "layouts/base.njk"
 </div>
 
 {% set ctaTitle = "See the register for your environment." %}
-{% set ctaSubtext = "We'll deploy to a pilot group, show you what Aurora finds, and walk through ownership resolution in a live environment." %}
-{% set ctaButtonLabel = "Book a live walkthrough" %}
-{% set ctaButtonAriaLabel = "Book a live walkthrough with the Aurora team" %}
-{% set ctaButtonTarget = "_self" %}
-{% set ctaButtonRel = "" %}
+{% set ctaSubtext = "Push the browser sensor to a pilot group, bring the risk engine up in your cloud, and watch the register fill in." %}
 {% include "cta.njk" %}

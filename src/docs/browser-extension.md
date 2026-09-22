@@ -10,8 +10,8 @@ layout: docs.njk
     The Aurora browser extension captures light telemetry from the user’s browser without interrupting SSO or day-to-day workflows. It is the fastest way to see which AI and SaaS tools are being used and by whom.
   </p>
   <div class="callout">
-    <strong>Source code:</strong> The extension is available at
-    <a target="_blank" href="https://github.com/aurora-identity/browser-extension">aurora-identity/browser-extension</a>. If you need access, and still don't have one, let us know while we prepare to open source it.
+    <strong>Source code:</strong> The extension is open source at
+    <a target="_blank" href="{{ site.extensionRepoUrl }}">aurora-identity/browser-extension</a>. The README covers building it, loading it unpacked for a local test, and the policy values your MDM has to push.
   </div>
 </section>
 

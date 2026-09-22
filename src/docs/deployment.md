@@ -7,7 +7,7 @@ layout: docs.njk
 <section class="section-card" id="deployment-choice">
   <div class="callout">
     <strong>Deployment status:</strong>
-    <p style="margin-top: 0.5rem;">Aurora is available today as a self-managed deployment that lives entirely inside your environment (cloud or on-prem). A managed service is planned, but not yet available.</p>
+    <p style="margin-top: 0.5rem;">Aurora is open source and available today as a self-managed deployment that lives entirely inside your environment (cloud or on-prem). The code is on GitHub: <a target="_blank" href="{{ site.repoUrl }}">risk-engine</a> and <a target="_blank" href="{{ site.extensionRepoUrl }}">browser-extension</a>. A managed service is planned, but not yet available.</p>
   </div>
 </section>
 
@@ -29,9 +29,9 @@ layout: docs.njk
 </section>
 
 <section class="section-card" id="local-run">
-  <h2>Once you have Aurora running</h2>
+  <h2>Running Aurora</h2>
   <p>
-    Customers receive a Docker Compose bundle with preconfigured images for the ingest service, ClickHouse, and the browser extension. Build and deploy the stack (locally) with <code>docker compose up --build</code> to mirror production flows end-to-end.
+    The <a target="_blank" href="{{ site.repoUrl }}">risk-engine</a> repository ships a Docker Compose file with the ingest service, ClickHouse and the dashboard. Clone it and run <code>docker compose up --build</code> to mirror production flows end-to-end. The README covers the Google OAuth client and the tenant row you need before signing in, and <code>aws/</code> holds the CloudFormation and Kubernetes manifests for a real deployment.
   </p>
   <h3>Evaluation workflow</h3>
   <ol>

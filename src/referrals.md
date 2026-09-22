@@ -44,6 +44,9 @@ layout: "layouts/base.njk"
 </div>
 </div>
 
-{% set ctaButtonTarget = "_blank" %}
-{% set ctaButtonRel = "noopener noreferrer" %}
+{% set ctaTitle = "Know a team that should see this?" %}
+{% set ctaSubtext = "Send them the repository, or introduce us directly." %}
+{% set ctaButtonHref = site.contactUrl %}
+{% set ctaButtonLabel = "Make an intro" %}
+{% set ctaButtonAriaLabel = "Introduce a team to Aurora Identity on GitHub" %}
 {% include "cta.njk" %}
